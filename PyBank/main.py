@@ -7,11 +7,12 @@ print("Financial Analysis")
 print("-----------------------------------------------")
 numberOfMonths=[]
 amount=[]
-total=0
-greatestIncreaseInProfits=0
-greatestDecreaseInProfits=0
 changeInProfit=[]
-i=1
+total=0
+#greatestIncreaseInProfits=0
+#greatestDecreaseInProfits=0
+
+
 
 with open(csvpath) as budgetFile:
 
@@ -38,8 +39,8 @@ with open(csvpath) as budgetFile:
 
     print("Total : ",total)
     print(f"Average Change : ${round(averageChange,2)}")
-    print("Greatest Increase In Profits : ",numberOfMonths[changeInProfit.index(greatestIncreaseInProfits)+1],"($",greatestIncreaseInProfits,")")
-    print("Greatest Decrease In Profits : ", numberOfMonths[changeInProfit.index(greatestDecreaseInProfits)+1],"($",greatestDecreaseInProfits,")")
+    print(f"Greatest Increase In Profits : {numberOfMonths[changeInProfit.index(greatestIncreaseInProfits)+1]} (${greatestIncreaseInProfits})")
+    print(f"Greatest Decrease In Profits : {numberOfMonths[changeInProfit.index(greatestDecreaseInProfits)+1]} (${greatestDecreaseInProfits})")
     #print(len(changeInProfit))
     #print(len(numberOfMonths))
             
