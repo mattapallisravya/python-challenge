@@ -1,2 +1,6 @@
 # python-challenge
-financial analysis for pyBank and election results for pyPoll.
+1. Financial analysis for pyBank 
+
+
+
+2. Election results for pyPoll.

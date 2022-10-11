@@ -5,7 +5,7 @@ import os
 import csv
 
 #Specifying the path to write the output to file 
-output_path = os.path.join("..", "PyBank", "Analysis", "output.csv")
+output_path = os.path.join("..", "PyPoll", "Analysis", "output.csv")
 
 # Path to access budget_data.csv file
 csvpath = os.path.join('..','PyBank', 'Resources', 'budget_data.csv')
@@ -70,7 +70,7 @@ with open(output_path, 'w', newline='') as outputFile:
                     greatestDecreaseInProfit=netChange
                     greatestDecreaseInProfitmonth=items[0]
             
-         # Calculating averageChange in profit/loss 
+        # Calculating averageChange in profit/loss 
         averageChange=sumOfNetChangeInProfit/counter-1
 
         #Writing to output.csv
@@ -78,14 +78,14 @@ with open(output_path, 'w', newline='') as outputFile:
         outputFile.writelines(f"Total : {total}\n")
         outputFile.writelines(f"Average Change : ${round(averageChange,2)}\n")
         outputFile.writelines(f'Greatest Increase In Profits : {greatestIncreaseInProfitmonth} (${greatestIncreaseInProfit})\n')
-        outputFile.writelines(f'Greatest Increase In Profits : {greatestDecreaseInProfitmonth} (${greatestDecreaseInProfit})')
+        outputFile.writelines(f'Greatest Decrease In Profits : {greatestDecreaseInProfitmonth} (${greatestDecreaseInProfit})')
         
         # Printing the values to terminal
         print("Financial Analysis/n",dots)
         print("Total : ",total)
         print(f"Average Change : ${round(averageChange,2)}")
         print(f'Greatest Increase In Profits : {greatestIncreaseInProfitmonth} (${greatestIncreaseInProfit})')
-        print(f'Greatest Increase In Profits : {greatestDecreaseInProfitmonth} (${greatestDecreaseInProfit})')
+        print(f'Greatest Decrease In Profits : {greatestDecreaseInProfitmonth} (${greatestDecreaseInProfit})')
        
         
         
