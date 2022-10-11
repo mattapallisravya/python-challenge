@@ -5,7 +5,7 @@ import os
 import csv
 
 #Specifying the path to write the output to file 
-output_path = os.path.join("..", "PyPoll", "Analysis", "output.csv")
+output_path = os.path.join("..", "PyBank", "Analysis", "output.csv")
 
 # Path to access budget_data.csv file
 csvpath = os.path.join('..','PyBank', 'Resources', 'budget_data.csv')
@@ -21,6 +21,8 @@ dots="-----------------------------------------------"
 
 # Opening the file using "write" mode. Specify the variable to hold the contents
 with open(output_path, 'w', newline='') as outputFile:
+     
+    outputFile.writelines(f'Financial Analysis\n{dots}\n')
 
     #opening the file budget_data.csv by specifying path variable and storing it in a variable
     with open(csvpath) as budgetFile:
@@ -74,7 +76,7 @@ with open(output_path, 'w', newline='') as outputFile:
         averageChange=sumOfNetChangeInProfit/counter-1
 
         #Writing to output.csv
-        outputFile.writelines(f'Financial Analysis\n{dots}\n')
+       
         outputFile.writelines(f"Total : {total}\n")
         outputFile.writelines(f"Average Change : ${round(averageChange,2)}\n")
         outputFile.writelines(f'Greatest Increase In Profits : {greatestIncreaseInProfitmonth} (${greatestIncreaseInProfit})\n')
