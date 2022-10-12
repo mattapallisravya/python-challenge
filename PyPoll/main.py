@@ -17,7 +17,6 @@ listOfCandidates=[]
 totalVotesCandidateWon={}
 totalVotes=0
 
-
 print(f"Election Results\n{dots}")
 
 # Opening the file using "write" mode. Specify the variable to hold the contents
