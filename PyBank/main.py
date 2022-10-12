@@ -5,7 +5,7 @@ import os
 import csv
 
 #Specifying the path to write the output to file 
-output_path = os.path.join("..", "PyBank", "Analysis", "output.csv")
+output_path = os.path.join("..", "PyBank", "Analysis", "output.txt")
 
 # Path to access budget_data.csv file
 csvpath = os.path.join('..','PyBank', 'Resources', 'budget_data.csv')

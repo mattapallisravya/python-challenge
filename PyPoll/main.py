@@ -5,7 +5,7 @@ import os
 import csv
 
 #Specifying the path to write the output to file 
-output_path = os.path.join("..", "PyPoll", "Analysis", "output.csv")
+output_path = os.path.join("..", "PyPoll", "Analysis", "output.txt")
 
 #Specifying the path to read the data and to analyse
 csvpath = os.path.join('..','PyPoll', 'Resources', 'election_data.csv')
@@ -36,7 +36,6 @@ with open(output_path, 'w', newline='') as outputFile:
         
         # Reads each row of data after the header
         for line in csvreader:
-            line[0]
             
             # To count total number of votes
             counter+=1
@@ -77,6 +76,8 @@ with open(output_path, 'w', newline='') as outputFile:
 
         # Printing the winner name to output.csv
         print(f'Winner : {maxVotesWonBy[maxVotes.index(max(maxVotes))]}\n{dots}')
+
+        
         
 
     
