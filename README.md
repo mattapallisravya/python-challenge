@@ -22,18 +22,8 @@
 
 - Analysis was made on the dataset composed of two colums "Date" and "Profit/Losses"
 
-Analysis Results: 
 
-Financial Analysis
------------------------------------------------
-Total Months : 86
-Total : 22564198
-Average Change : $-8311.11
-Greatest Increase In Profits : Aug-16 ($1862002)
-Greatest Decrease In Profits : Feb-14 ($-1825558)
-
-
----------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------
  
 
 
@@ -57,15 +47,4 @@ Greatest Decrease In Profits : Feb-14 ($-1825558)
 
 - To run script in terminal: python main.py
 
-Analysis:
 
-Election Results
------------------------------------------------
-Total Votes : 369711
------------------------------------------------
-Charles Casper Stockham : 23.049% (85213)
-Diana DeGette : 73.812% (272892)
-Raymon Anthony Doane : 3.139% (11606)
------------------------------------------------
-Winner : Diana DeGette
------------------------------------------------
