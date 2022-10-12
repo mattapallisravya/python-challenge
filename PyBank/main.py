@@ -19,6 +19,7 @@ total=0
 dots="-----------------------------------------------"
 
 
+
 # Opening the file using "write" mode. Specify the variable to hold the contents
 with open(output_path, 'w', newline='') as outputFile:
      
@@ -36,14 +37,13 @@ with open(output_path, 'w', newline='') as outputFile:
         # Reads each row of data after header
         for items in csvreader:
 
-            # Finds total profis/loss
-            total=total+int(items[1])
-
-            # To count number of rows
-            counter+=1
-            
             # Exectes if condition is true
             if firstRow==True:
+                # Finds total profis/loss
+                total=total+int(items[1])
+
+                # To count number of rows
+                counter+=1
                 
                 # Assigning 1st value of profit/loss column to a variable
                 previousRow=int(items[1])
@@ -52,6 +52,11 @@ with open(output_path, 'w', newline='') as outputFile:
                 firstRow=False
             
             else:
+                # Finds total profis/loss
+                total=total+int(items[1])
+
+                # To count number of rows
+                counter+=1
                 
                 # Calculates net change in profit/loss
                 netChange=int(items[1])-previousRow
@@ -73,17 +78,18 @@ with open(output_path, 'w', newline='') as outputFile:
                     greatestDecreaseInProfitmonth=items[0]
             
         # Calculating averageChange in profit/loss 
-        averageChange=sumOfNetChangeInProfit/counter-1
+        averageChange=sumOfNetChangeInProfit/(counter-1)
 
         #Writing to output.csv
-       
+        outputFile.writelines(f'Total Months : {counter}\n')
         outputFile.writelines(f"Total : {total}\n")
         outputFile.writelines(f"Average Change : ${round(averageChange,2)}\n")
         outputFile.writelines(f'Greatest Increase In Profits : {greatestIncreaseInProfitmonth} (${greatestIncreaseInProfit})\n')
         outputFile.writelines(f'Greatest Decrease In Profits : {greatestDecreaseInProfitmonth} (${greatestDecreaseInProfit})')
         
         # Printing the values to terminal
-        print("Financial Analysis/n",dots)
+        print("Financial Analysis\n",dots)
+        print(f'Total Months : {counter}')
         print("Total : ",total)
         print(f"Average Change : ${round(averageChange,2)}")
         print(f'Greatest Increase In Profits : {greatestIncreaseInProfitmonth} (${greatestIncreaseInProfit})')
